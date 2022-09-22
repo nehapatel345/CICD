@@ -1,0 +1,15 @@
+steps:
+  # build the container image
+- name: "gcr.io/cloud-builders/docker"
+  args: ["build", "-t", "gcr.io/neha-patel-1/nginx:v1", "."]
+  # push container image
+- name: "gcr.io/cloud-builders/docker"
+  args: ["push", "gcr.io/neha-patel-1/nginx:v1"]
+  # deploy container image to GKE
+- name: "gcr.io/cloud-builders/gke-deploy"
+  args:
+  - run
+  - --filename=k8S/
+  - --image=gcr.io/neha-patel-1/nginx:v1
+  - --location=us-central1-c
+  - --cluster=gke-terraform-learn
