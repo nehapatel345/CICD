@@ -1,15 +1,15 @@
 steps:
   # build the container image
 - name: "gcr.io/cloud-builders/docker"
-  args: ["build", "-t", "gcr.io/steam-treat-288817/nginx:v1", "."]
+  args: ["build", "-t", "gcr.io/inavolan/nginx:v1", "."]
   # push container image
 - name: "gcr.io/cloud-builders/docker"
-  args: ["push", "gcr.io/steam-treat-288817/nginx:v1"]
+  args: ["push", "gcr.io/inavolan/nginx:v1"]
   # deploy container image to GKE
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
   - run
   - --filename=k8S/
-  - --image=gcr.io/steam-treat-288817/nginx:v1
+  - --image=gcr.io/inavolan/nginx:v1
   - --location=us-central1
   - --cluster=gke-demo
