@@ -12,4 +12,4 @@ steps:
   - --filename=k8S/
   - --image=gcr.io/inavolan/nginx:v1
   - --location=us-central1
-  - --cluster=gke-demo
+  - --cluster=inavolan-sample-cluster-1
