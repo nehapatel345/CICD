@@ -1,7 +1,7 @@
 
 resource "google_compute_instance" "default" {
-  name         = "test27"
-  machine_type = "f1-micro"
+  name         = "test28"
+  machine_type = "e1-small"
   project = "inavolan"
   zone         = "us-central1-c"
 
@@ -22,4 +22,3 @@ resource "google_compute_instance" "default" {
   }
 
 }
-
