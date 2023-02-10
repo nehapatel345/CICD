@@ -25,4 +25,5 @@ resource "google_compute_instance" "default" {
 
 resource "google_compute_network" "vpc_network" {
   name = "vpc-network"
+  project = "inavolan"
 }
