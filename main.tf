@@ -7,6 +7,8 @@ resource "google_compute_instance" "default" {
 
   tags = ["allow-firewall"]
 
+  allow_stopping_for_update = true
+
   boot_disk {
     initialize_params {
       image = "debian-cloud/debian-11"
