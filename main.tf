@@ -17,9 +17,12 @@ resource "google_compute_instance" "default" {
   }
 
   network_interface {
-    network = "terraform-network"
-    subnetwork = "terraform-subnetwork-sub"
+    network = google_compute_network.vpc_network.name
 
   }
 
+}
+
+resource "google_compute_network" "vpc_network" {
+  name = "vpc-network"
 }
