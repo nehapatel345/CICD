@@ -97,4 +97,5 @@ steps:
           terraform apply -auto-approve || exit 1
           cd ../../
         done
+      fi 
 # [END tf-apply]      
