@@ -2,6 +2,7 @@
 resource "google_compute_instance" "default" {
   name         = "test24"
   machine_type = "e2-medium"
+  project = "inavolan"
   zone         = "us-central1-c"
 
   tags = ["allow-firewall"]
