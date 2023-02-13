@@ -1,12 +1,10 @@
 resource "google_compute_instance" "default" {
-  name         = "vm1-test"
+  name         = "vm13-test"
   machine_type = "e2-small"
   project = "inavolan"
   zone         = "us-central1-c"
 
   tags = ["allow-firewall"]
-
-  
 
   boot_disk {
     initialize_params {
@@ -22,4 +20,5 @@ resource "google_compute_instance" "default" {
 
   }
   allow_stopping_for_update = true
+
 }
