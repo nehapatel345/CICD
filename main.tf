@@ -1,6 +1,6 @@
 
 resource "google_compute_instance" "default" {
-  name         = "test721"
+  name         = "test8"
   machine_type = "e2-small"
   project = "inavolan"
   zone         = "us-central1-c"
