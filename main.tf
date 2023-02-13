@@ -1,4 +1,3 @@
-
 resource "google_compute_instance" "default" {
   name         = "vm-test"
   machine_type = "e2-small"
