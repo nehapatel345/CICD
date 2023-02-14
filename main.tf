@@ -1,5 +1,5 @@
 resource "google_compute_instance" "default" {
-  name         = "vm13-test"
+  name         = "test"
   machine_type = "e2-small"
   project = "inavolan"
   zone         = "us-central1-c"
